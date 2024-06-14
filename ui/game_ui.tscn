@@ -1,0 +1,100 @@
+[gd_scene load_steps=8 format=3 uid="uid://dpkjd3qitqsli"]
+
+[ext_resource type="Script" path="res://ui/game_ui.gd" id="1_cw5t1"]
+[ext_resource type="Texture2D" uid="uid://cxsltbuv64x6w" path="res://addons/Tiny Swords/UI/Banners/Banner_Horizontal.png" id="1_trvv2"]
+[ext_resource type="LabelSettings" uid="uid://dugk2lghbk6on" path="res://test_scenes/ResourcesLabelSettings.tres" id="2_w1r5j"]
+[ext_resource type="LabelSettings" uid="uid://c1ufqarpa6qiy" path="res://test_scenes/TimerLabelSettings.tres" id="3_nnf1b"]
+[ext_resource type="Texture2D" uid="uid://d4j5l7mt3rsaj" path="res://addons/Tiny Swords/Resources/Resources/M_Idle_(NoShadow).png" id="4_22dhn"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tkyla"]
+texture = ExtResource("1_trvv2")
+texture_margin_left = 32.0
+texture_margin_top = 16.0
+texture_margin_right = 32.0
+texture_margin_bottom = 48.0
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+region_rect = Rect2(32, 48, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_loq84"]
+atlas = ExtResource("4_22dhn")
+region = Rect2(36, 48, 60, 60)
+
+[node name="GameUI" type="CanvasLayer"]
+script = ExtResource("1_cw5t1")
+
+[node name="ResourcesPanel" type="Panel" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -125.0
+offset_top = 15.0
+offset_right = 105.0
+offset_bottom = 127.0
+grow_horizontal = 0
+scale = Vector2(0.5, 0.5)
+theme_override_styles/panel = SubResource("StyleBoxTexture_tkyla")
+
+[node name="MeatLabel" type="Label" parent="ResourcesPanel"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 3.0
+offset_top = -34.0
+offset_right = 49.0
+offset_bottom = 7.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "15"
+label_settings = ExtResource("2_w1r5j")
+horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="ResourcesPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -69.0
+offset_top = -46.0
+offset_right = -9.0
+offset_bottom = 14.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_loq84")
+
+[node name="TimerPanel" type="Panel" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -71.0
+offset_top = 5.0
+offset_right = 215.0
+offset_bottom = 139.0
+grow_horizontal = 2
+scale = Vector2(0.5, 0.5)
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxTexture_tkyla")
+
+[node name="TimerLabel" type="Label" parent="TimerPanel"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -103.0
+offset_top = -50.5
+offset_right = 103.0
+offset_bottom = 30.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "18:50"
+label_settings = ExtResource("3_nnf1b")
+horizontal_alignment = 1

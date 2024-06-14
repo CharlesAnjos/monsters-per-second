@@ -1,0 +1,11 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://dugk2lghbk6on"]
+
+[sub_resource type="SystemFont" id="SystemFont_57kdv"]
+font_names = PackedStringArray("C059")
+font_weight = 999
+
+[resource]
+font = SubResource("SystemFont_57kdv")
+font_size = 40
+font_color = Color(0, 0, 0, 1)
+shadow_color = Color(0, 0, 0, 0.819608)

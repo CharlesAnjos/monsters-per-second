@@ -1,0 +1,20 @@
+[gd_scene load_steps=7 format=3 uid="uid://cfc2elj1ngjiu"]
+
+[ext_resource type="PackedScene" uid="uid://u5vmunvb3t3v" path="res://player/player.tscn" id="1_itljv"]
+[ext_resource type="PackedScene" uid="uid://cefnhrfalnp42" path="res://systems/mob_spawner.tscn" id="2_tjqh2"]
+[ext_resource type="PackedScene" uid="uid://feks4ug0kh3j" path="res://enemies/goblin.tscn" id="3_t0s3m"]
+[ext_resource type="PackedScene" uid="uid://c6r51ciuxfe41" path="res://enemies/pawn.tscn" id="4_jlv8a"]
+[ext_resource type="PackedScene" uid="uid://bswcqa8wr1ff" path="res://enemies/sheep.tscn" id="5_jtrve"]
+[ext_resource type="PackedScene" uid="uid://dpkjd3qitqsli" path="res://ui/game_ui.tscn" id="6_es3pt"]
+
+[node name="TestMobSpawner" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_itljv")]
+position = Vector2(535, 371)
+ritual_damage = 2
+ritual_interval = 10.0
+
+[node name="MobSpawner" parent="." instance=ExtResource("2_tjqh2")]
+creatures = Array[PackedScene]([ExtResource("5_jtrve"), ExtResource("4_jlv8a"), ExtResource("3_t0s3m")])
+
+[node name="GameUI" parent="." instance=ExtResource("6_es3pt")]

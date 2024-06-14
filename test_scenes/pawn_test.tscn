@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://vq1dvkat0tts"]
+
+[ext_resource type="PackedScene" uid="uid://cgxn317hpbhj4" path="res://enemies/pawn_player_copy.tscn" id="1_npggq"]
+[ext_resource type="Texture2D" uid="uid://piua0opc820s" path="res://addons/Tiny Swords/Factions/Knights/Troops/Pawn/Purple/Pawn_Purple.png" id="2_so3l1"]
+
+[node name="PawnTest" type="Node2D"]
+
+[node name="Pawn" parent="." instance=ExtResource("1_npggq")]
+position = Vector2(247, 506)
+scale = Vector2(6, 6)
+
+[node name="PawnPurple" type="Sprite2D" parent="."]
+position = Vector2(851, 348)
+scale = Vector2(0.51947, 0.51947)
+texture = ExtResource("2_so3l1")

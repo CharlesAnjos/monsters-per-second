@@ -1,0 +1,10 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://c1ufqarpa6qiy"]
+
+[sub_resource type="SystemFont" id="SystemFont_hucnp"]
+font_names = PackedStringArray("C059")
+font_weight = 999
+
+[resource]
+font = SubResource("SystemFont_hucnp")
+font_size = 80
+font_color = Color(0, 0, 0, 1)
